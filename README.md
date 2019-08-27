@@ -6,11 +6,19 @@ INFO:
 - zakładając, że chcemy, żeby element (img3) wjechał z prawej strony do samego początku elementu przy scrollowaniu do odpowiedniego momentu ponownie przelicza się wielkość kontenera, żeby przesunąć obiekt w odpowiednie miejsce.
 
 WARNING:
-1. Działa dziwnie, jeśli przy load element ustawi się w odpowiednim miejscu, potem robimy resize do mniejszego i scrollujemy do odpalenia przesunięcia obiektu - przesuwa się za mało. Jeśli z mniejszego resizujemy do większego, to obraz pojedzie za daleko i zniknie.
-2. Co można ustawić, żeby raz "wjechany" obraz został w miejscu i był widoczny mimo resizu? Dodatkowo jeśli obraz wyjedzie przy resizie z ekranu, to przy scrollu powinien znowu wjechać, ale lepiej jakby był cały czas na miejscu. Może fixed width? Ale co z RWD?Może fixed width obrazu? I jeszcze width: 100%, height: auto?
+1. na razie bez
 
 TO DO:
+0. Spróbować jeszcze z klasami animacji nadawanymi przez JSa. Może animacja 0% left 100%, a 100% 0px? Żeby jakoś zastąpić obliczanie szerokości diva.
 1. 3 obrazy w dalszych sekcjach, które wjeżdżają przy odpowiednim scrollu.
 2. Dynamiczna zmiana wartości translateX na podstawie wielkości kontenera.
 3. Dostosować kontenery do RWD.
-4. Wyrzucić zakomentowany kod tu i w Happy Kittens
+4. Wyrzucić zakomentowany kod tu i z Happy Kittens
+5. Publiczne repozytorium
+6. Dlaczego sekcja 5 przy resize ucina obraz?
+7. Pomyśleć, czy można skrócić jakoś kod js.
+8. Nadać odpowiednie nazwy zdublowanym funkcjom lub zobaczyć, czy można je jakoś wykorzystać bez pisania kilka razy.
+
+FINAL README
+
+1. All containers (sections) have the same width so I used document.querySelector('.standardSection').clientWidth to check container width. It will dynamically change transform: translateX values for sliding in images. It doesn't matter if the width is 900px or 300px, the image will slide to the specified place in the container.
