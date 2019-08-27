@@ -13,18 +13,22 @@ main {
     width: 900px;
     height: 300px;
     margin: 5px 0;
+    font-size: 2em;
     overflow: hidden;
     position: relative;
 }
 
 .standardSection img {
-    transition: transform 4s ease;
+    transition: transform 3000ms ease;
+    max-width: 100%;
+    height: auto;
 }
 
-.toSlideIn3 {
+.toSlideIn {
     position: absolute;
-    /* left: 900px; */
 }
+
+/* = = = = = = = = = = = = = = = = = = */
 
 .background--blue {
     background: rgb(99, 151, 199);
@@ -49,4 +53,3 @@ main {
 .background--red {
     background: rgb(199, 99, 99);
 }
-
