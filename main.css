@@ -1,0 +1,52 @@
+body {
+    background: rgb(40, 63, 87);
+}
+
+main {
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+}
+
+.standardSection {
+    width: 900px;
+    height: 300px;
+    margin: 5px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.standardSection img {
+    transition: transform 4s ease;
+}
+
+.toSlideIn3 {
+    position: absolute;
+    /* left: 900px; */
+}
+
+.background--blue {
+    background: rgb(99, 151, 199);
+}
+
+.background--lavender {
+    background: rgb(194, 73, 224);
+}
+
+.background--mint {
+    background: rgb(99, 199, 169);
+}
+
+.background--green {
+    background: rgb(59, 163, 64);
+}
+
+.background--yellow {
+    background: rgb(211, 221, 73);
+}
+
+.background--red {
+    background: rgb(199, 99, 99);
+}
+
