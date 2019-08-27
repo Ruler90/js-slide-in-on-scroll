@@ -13,3 +13,4 @@ TO DO:
 1. 3 obrazy w dalszych sekcjach, które wjeżdżają przy odpowiednim scrollu.
 2. Dynamiczna zmiana wartości translateX na podstawie wielkości kontenera.
 3. Dostosować kontenery do RWD.
+4. Wyrzucić zakomentowany kod tu i w Happy Kittens
