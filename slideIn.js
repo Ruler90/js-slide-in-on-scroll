@@ -1,9 +1,13 @@
 /* eslint-disable semi */
 
 let containerWidth;
+let containerHeight;
 
 function checkContainerWidth () {
   containerWidth = document.querySelector('.standardSection').clientWidth;
+}
+function checkContainerHeight () {
+  containerHeight = document.querySelector('.standardSection').clientHeight;
 }
 
 // SECTION 3 - From Right to Left
@@ -13,6 +17,7 @@ const imgToSlideIn3 = document.querySelector('.imgSlide3');
 function outOfViewRight () {
   checkContainerWidth();
   imgToSlideIn3.style.left = containerWidth + 'px';
+  imgToSlideIn3.style.bottom = '-4px';
 }
 
 function slideInOnScrollFromRight () {
@@ -36,32 +41,48 @@ function slideInOnScrollFromLeft () {
   }
 }
 
-// SECTION 5 - From Right to Left
+// SECTION 5 - From Bottom to Top
 
 const imgToSlideIn5 = document.querySelector('.imgSlide5');
 
-function outOfViewRight2 () {
-  checkContainerWidth();
-  imgToSlideIn5.style.left = containerWidth + 'px';
+function outOfViewBottom () {
+  checkContainerHeight();
+  imgToSlideIn5.style.top = containerHeight + 'px';
+  imgToSlideIn5.style.left = '40%';
 }
 
-function slideInOnScrollFromRight2 () {
+function slideInOnScrollFromBottom () {
   if (scrollY > 800) {
-    imgToSlideIn5.style.transform = 'translateX(-' + containerWidth / 1.5 + 'px)';
+    imgToSlideIn5.style.transform = 'translateY(-' + containerHeight + 'px)';
   }
 }
 
-// function imageCenter () {
-//   if (window.innerWidth < 600) {
-//     imgToSlideIn5.style.transform = '';
-//     imgToSlideIn5.style.left = '40%';
-//   }
-// }
+// SECTION 6 - From Bottom to Top
 
-window.addEventListener('load', outOfViewRight);
-window.addEventListener('load', outOfViewRight2);
-window.addEventListener('load', outOfViewLeft);
-window.addEventListener('scroll', slideInOnScrollFromRight);
-window.addEventListener('scroll', slideInOnScrollFromRight2);
-window.addEventListener('scroll', slideInOnScrollFromLeft);
+const imgToSlideIn6 = document.querySelector('.imgSlide6');
+
+function outOfViewTop () {
+  checkContainerHeight();
+  imgToSlideIn6.style.bottom = containerHeight + 'px';
+  imgToSlideIn6.style.left = '25%';
+}
+
+function slideInOnScrollFromTop () {
+  if (scrollY > 1100) {
+    imgToSlideIn6.style.transform = 'translateY(' + containerHeight + 'px)';
+  }
+}
+
+window.addEventListener('load', function () {
+  outOfViewRight();
+  outOfViewLeft();
+  outOfViewBottom()
+  outOfViewTop()
+});
+window.addEventListener('scroll', function () {
+  slideInOnScrollFromRight();
+  slideInOnScrollFromLeft()
+  slideInOnScrollFromBottom();
+  slideInOnScrollFromTop();
+});
 // window.addEventListener('resize', imageCenter);
