@@ -1,0 +1,64 @@
+.animation {
+  position: absolute;
+  animation-timing-function: ease;
+}
+
+.animation--time {
+  animation-duration: 3000ms;
+}
+
+.animation__slideFromLeftToRight {
+  animation-name: slideFromLeftToRight;
+}
+
+@keyframes slideFromLeftToRight {
+  0% {
+    right: 100%;
+  }
+
+  100% {
+    right: 0%;
+  }
+}
+
+.animation__slideFromRightToLeft {
+  animation-name: slideFromRightToLeft;
+}
+
+@keyframes slideFromRightToLeft {
+  0% {
+    left: 100%;
+  }
+
+  100% {
+    left: 0%;
+  }
+}
+
+.animation__slideFromBottomToTop {
+  animation-name: slideFromBottomToTop;
+}
+
+@keyframes slideFromBottomToTop {
+  0% {
+    top: 100%;
+  }
+
+  100% {
+    top: 0%;
+  }
+}
+
+.animation__slideFromTopToBottom {
+  animation-name: slideFromTopToBottom;
+}
+
+@keyframes slideFromTopToBottom {
+  0% {
+    bottom: 100%;
+  }
+
+  100% {
+    bottom: 0%;
+  }
+}
