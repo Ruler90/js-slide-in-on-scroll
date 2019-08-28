@@ -14,4 +14,5 @@ FINAL README
 
 1. All containers (sections) have the same width so I used document.querySelector('.standardSection').clientWidth to check container width (and height the same way). It will dynamically change transform: translateX values for sliding in images. It doesn't matter if the width is 900px or 300px, the image will slide to the specified place in the container when the function will execute.
 2. The least effort need the images that have the same height as the containers (300px). If img has less height than 300px, sometimes we need to stick them to one of the borders of the container.
-3. Functions are runned by eventListeners - when the page is loaded, it hides all images, and then reveals them in animated way when scrollY reaches certain points.
+3. Image with text has media queries that changes font-size and image height on smaller width.
+4. Functions are runned by eventListeners - when the page is loaded, it hides all images, and then reveals them in animated way when scrollY reaches certain points.
