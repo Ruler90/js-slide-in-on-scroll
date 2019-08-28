@@ -18,7 +18,7 @@ main {
     position: relative;
 }
 
-.standardSection img {
+.standardSection img, .standardSection div {
     transition: transform 3000ms ease;
     max-width: 100%;
     height: auto;
@@ -26,6 +26,14 @@ main {
 
 .toSlideIn {
     position: absolute;
+}
+
+.textWithImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    text-align: justify;
 }
 
 /* = = = = = = = = = = = = = = = = = = */
@@ -52,4 +60,30 @@ main {
 
 .background--red {
     background: rgb(199, 99, 99);
+}
+
+/* = = = = = = = = = = = = = = = = = = */
+
+@media screen and (max-width: 560px) {
+    .textWithImage div {
+        font-size: 0.8em;
+    }
+    .textWithImage img {
+        height: 250px;
+    }
+    .resizeHeight {
+        height: 260px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .textWithImage div {
+        font-size: 0.7em;
+    }
+    .textWithImage img {
+        height: 200px;
+    }
+    .resizeHeight {
+        height: 220px;
+    }
 }
