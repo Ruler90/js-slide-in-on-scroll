@@ -1,18 +1,6 @@
 # JS Slide In On Scroll
 
-WARNING:
-1. Nie mogę dostosować środkowych obrazów, żeby przesuwały się razem z resizem kontenera jak te dwa pierwsze (może dlatego, że te dwa pierwsze przyklejają się do krawędzi?)
-
-TO DO:
-- Spróbować jeszcze z klasami animacji nadawanymi przez JSa. Może animacja 0% left 100%, a 100% 0px? Żeby jakoś zastąpić obliczanie szerokości diva.
-- Wyrzucić zakomentowany kod tu i z Happy Kittens
-- Publiczne repozytorium
-- Pomyśleć, czy można skrócić jakoś kod js.
-- Nadać odpowiednie nazwy zdublowanym funkcjom lub zobaczyć, czy można je jakoś wykorzystać bez pisania kilka razy.
-
-FINAL README
-
-1. All containers (sections) have the same width so I used document.querySelector('.standardSection').clientWidth to check container width (and height the same way). It will dynamically change transform: translateX values for sliding in images. It doesn't matter if the width is 900px or 300px, the image will slide to the specified place in the container when the function will execute.
-2. The least effort need the images that have the same height as the containers (300px). If img has less height than 300px, sometimes we need to stick them to one of the borders of the container.
-3. Image with text has media queries that changes font-size and image height on smaller width.
-4. Functions are runned by eventListeners - when the page is loaded, it hides all images, and then reveals them in animated way when scrollY reaches certain points.
+1. All elements that will slide in have elementHidden classes which are removed when scrollY reaches certain points. In the same time that elements gets specific animation classes and style that stick element to the position where animation ends.
+2. Image with text has media queries that changes font-size and image height when screen width is smaller. It's not 100% RWD but I wanted to show the main idea.
+3. Images 5 and 6 have media queries that will stick them to the right border when screen width reaches certain point. Without this they can be cropped when you resize the screen.
+4. I didn't write media queries for every element because elements sizes depend on project that you working on. E.g. you can give smaller height to entire section (as in my example with text and image) when screen width reaches certain point and much more.
