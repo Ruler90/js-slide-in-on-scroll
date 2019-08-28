@@ -28,7 +28,7 @@ function slideInOnScrollFromRight () {
 
 // SECTION 4 - From Left to Right
 
-const imgToSlideIn4 = document.querySelector('.imgSlide4');
+const imgToSlideIn4 = document.querySelector('.textWithImage');
 
 function outOfViewLeft () {
   checkContainerWidth();
