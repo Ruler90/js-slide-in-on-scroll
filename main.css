@@ -24,16 +24,16 @@ main {
     height: auto;
 }
 
-.toSlideIn {
-    position: absolute;
-}
-
 .textWithImage {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 500px;
     text-align: justify;
+}
+
+.elementHidden {
+    display: none;
 }
 
 /* = = = = = = = = = = = = = = = = = = */
@@ -64,7 +64,7 @@ main {
 
 /* = = = = = = = = = = = = = = = = = = */
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 600px) {
     .textWithImage div {
         font-size: 0.8em;
     }
@@ -73,6 +73,9 @@ main {
     }
     .resizeHeight {
         height: 260px;
+    }
+    .imgSlide5, .imgSlide6 {
+        right: 0%;
     }
 }
 
