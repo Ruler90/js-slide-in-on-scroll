@@ -5,6 +5,7 @@
 const imgToSlideIn3 = document.querySelector('.imgSlide3');
 
 function slideInOnScrollFromRight () {
+  console.log("sth");
   if (scrollY > 200) {
     imgToSlideIn3.classList.remove('elementHidden');
     imgToSlideIn3.classList.add('animation', 'animation--time', 'animation__slideFromRightToLeft');
@@ -49,9 +50,9 @@ function slideInOnScrollFromTop () {
   }
 }
 
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', _.throttle(function () {
   slideInOnScrollFromRight();
   slideInOnScrollFromLeft()
   slideInOnScrollFromBottom();
   slideInOnScrollFromTop();
-});
+}, 300));
