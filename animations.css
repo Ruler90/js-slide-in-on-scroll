@@ -7,6 +7,22 @@
   animation-duration: 3000ms;
 }
 
+.animation__slideFromRightToLeft {
+  animation-name: slideFromRightToLeft;
+}
+
+@keyframes slideFromRightToLeft {
+  0% {
+    left: 100%;
+    opacity: 0;
+  }
+
+  100% {
+    left: 0%;
+    opacity: 1;
+  }
+}
+
 .animation__slideFromLeftToRight {
   animation-name: slideFromLeftToRight;
 }
@@ -18,20 +34,6 @@
 
   100% {
     right: 0%;
-  }
-}
-
-.animation__slideFromRightToLeft {
-  animation-name: slideFromRightToLeft;
-}
-
-@keyframes slideFromRightToLeft {
-  0% {
-    left: 100%;
-  }
-
-  100% {
-    left: 0%;
   }
 }
 
