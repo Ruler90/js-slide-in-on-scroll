@@ -5,7 +5,6 @@
 const imgToSlideIn3 = document.querySelector('.imgSlide3');
 
 function slideInOnScrollFromRight () {
-  console.log("sth");
   if (scrollY > 200) {
     imgToSlideIn3.classList.remove('elementHidden');
     imgToSlideIn3.classList.add('animation', 'animation--time', 'animation__slideFromRightToLeft');
@@ -43,7 +42,7 @@ function slideInOnScrollFromBottom () {
 const imgToSlideIn6 = document.querySelector('.imgSlide6');
 
 function slideInOnScrollFromTop () {
-  if (scrollY > 1100) {
+  if (scrollY > 1000) {
     imgToSlideIn6.classList.remove('elementHidden');
     imgToSlideIn6.classList.add('animation', 'animation--time', 'animation__slideFromTopToBottom');
     imgToSlideIn6.style.bottom = '0%';
