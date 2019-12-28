@@ -1,5 +1,3 @@
-/* eslint-disable semi */
-
 // SECTION 3 - From Right to Left
 
 const imgToSlideIn3 = document.querySelector('.imgSlide3');
